@@ -5,8 +5,8 @@
 //  Created by Neoh Tian Pok on 23/1/26.
 //
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 char determineGrade(int mark);
 int studentId;
@@ -14,7 +14,7 @@ int studentMark;
 
 int main() {
 
-    while(1) {
+    while (1) {
         printf("Enter Student ID:\n");
         scanf("%d", &studentId);
 
