@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char determineGrade(int mark);
+char grade;
 int studentId;
 int studentMark;
 
@@ -25,22 +25,18 @@ int main() {
         printf("Enter Mark:\n");
         scanf("%d", &studentMark);
 
-        printf("Grade = %c\n", determineGrade(studentMark));
+        if (studentMark >= 75) {
+            grade = 'A';
+        } else if (studentMark >= 65) {
+            grade = 'B';
+        } else if (studentMark >= 55) {
+            grade = 'C';
+        } else if (studentMark >= 45) {
+            grade = 'D';
+        } else {
+            grade = 'F';
+        }
+        printf("Grade = %c\n", grade);
     }
-
     return 0;
-}
-
-char determineGrade(int mark) {
-    if (mark >= 75) {
-        return 'A';
-    } else if (mark >= 65) {
-        return 'B';
-    } else if (mark >= 55) {
-        return 'C';
-    } else if (mark >= 45) {
-        return 'D';
-    } else {
-        return 'F';
-    }
 }
