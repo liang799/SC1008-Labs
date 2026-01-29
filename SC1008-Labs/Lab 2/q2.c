@@ -20,10 +20,12 @@ int main() {
 }
 
 int digitPos1(int num, int digit) {
+    int pos = 0;
     int result = 0;
     do {
-        result++;
+        pos++;
         if (num % 10 == digit) {
+            result = pos;
             return result;
         }
         num = num / 10;
