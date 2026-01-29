@@ -22,6 +22,7 @@ int main() {
 int digitPos1(int num, int digit) {
     int result = 0;
     do {
+        result++;
         if (num % 10 == digit) {
             return result;
         }
