@@ -16,6 +16,9 @@ int main() {
 }
 
 int square1(int num) {
+    if (num == 0) {
+        return 0;
+    }
     int sum = 0;
     for (int i = 1; sum / num != num; i += 2) {
         sum += i;
@@ -24,6 +27,10 @@ int square1(int num) {
 }
 
 void square2(int num, int *result) {
+    if (num == 0) {
+        *result = 0;
+        return;
+    }
     *result = 0;
     for (int i = 1; *result / num != num; i += 2) {
         *result += i;
