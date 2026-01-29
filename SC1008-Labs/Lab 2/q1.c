@@ -23,16 +23,17 @@ int numDigits1(int num) {
     do {
         count++;
         num = num / 10;
-
     } while (num > 0);
+
     return count;
 }
 
 void numDigits2(int num, int *result) {
+    *result = 0;
+
     do {
         ++(*result);
         num = num / 10;
-
     } while (num > 0);
 
     return;
