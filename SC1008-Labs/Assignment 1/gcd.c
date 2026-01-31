@@ -16,6 +16,7 @@ int main() {
 int gcd1(int num1, int num2) {
     int larger = 0;
     int gcd = 1;
+    int i;
 
     if (num1 > num2) {
         larger = num1;
@@ -23,7 +24,7 @@ int gcd1(int num1, int num2) {
         larger = num2;
     }
 
-    for (int i = 1; i < larger; i++) {
+    for (i = 1; i < larger; i++) {
         if (num1 % i == 0 && num2 % i == 0) {
             gcd = i;
         }
@@ -35,6 +36,7 @@ int gcd1(int num1, int num2) {
 void gcd2(int num1, int num2, int *result) {
     int larger = 0;
     *result = 1;
+    int i;
 
     if (num1 > num2) {
         larger = num1;
@@ -42,7 +44,7 @@ void gcd2(int num1, int num2, int *result) {
         larger = num2;
     }
 
-    for (int i = 1; i < larger; i++) {
+    for (i = 1; i < larger; i++) {
         if (num1 % i == 0 && num2 % i == 0) {
             *result = i;
         }
