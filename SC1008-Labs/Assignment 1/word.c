@@ -1,10 +1,7 @@
 #include <stdio.h>
 
-int num;
-int digit;
-int firstDigit;
-
 int main() {
+    int num, digit, firstDigit = 0;
 
     printf("Enter the number:\n");
     scanf("%d", &num);
