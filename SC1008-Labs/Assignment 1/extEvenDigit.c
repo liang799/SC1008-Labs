@@ -15,11 +15,13 @@ int main() {
 }
 
 int extEvenDigits1(int num) {
-    int i = num;
-    int mult = 1;
-    int result = 0;
+    int i, mult, tmp, result;
+
+    i = num;
+    mult = 1;
+    result = 0;
     while (i != 0) {
-        int tmp = i % 10;
+        tmp = i % 10;
         if (tmp % 2 == 0) {
             result += tmp * mult;
             mult = mult * 10;
@@ -32,11 +34,13 @@ int extEvenDigits1(int num) {
     return result;
 }
 void extEvenDigits2(int num, int *result) {
-    int i = num;
-    int mult = 1;
+    int i, mult, tmp;
+
+    i = num;
+    mult = 1;
     *result = 0;
     while (i != 0) {
-        int tmp = i % 10;
+        tmp = i % 10;
         if (tmp % 2 == 0) {
             *result += tmp * mult;
             mult = mult * 10;
