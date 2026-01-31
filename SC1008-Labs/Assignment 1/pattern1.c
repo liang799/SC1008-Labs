@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-int input;
-int stars;
-
 int main() {
     /* Write your code here */
+    int input;
+    int stars;
+    int i, j, k;
+
     printf("Enter the height:\n");
     scanf("%d", &input);
     printf("The pattern is:\n");
 
-    for (int i = 0; i < input; i++) {
-        for (int j = 0; j < input - i; j++) {
+    for (i = 0; i < input; i++) {
+        for (j = 0; j < input - i; j++) {
             printf(" ");
         }
         stars = 2 * i + 1;
-        for (int j = 0; j < stars; j++) {
+        for (k = 0; k < stars; k++) {
             printf("*");
         }
         // 1, 3, 5, 7
