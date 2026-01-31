@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int fahrenheit;
-double celcius;
-
 int main() {
-    while (1) {
+    int fahrenheit = 0;
+    double celsius = 0.0;
 
+    while (1) {
         printf("Enter the temperature in degree F:\n");
         scanf("%d", &fahrenheit);
 
@@ -13,8 +12,9 @@ int main() {
             return 0;
         }
 
-        celcius = (5.0 / 9.0) * (fahrenheit - 32.0);
-        printf("Converted degree in C: %.2f\n", celcius);
+        celsius = (5.0 / 9.0) * (fahrenheit - 32.0);
+
+        printf("Converted degree in C: %.2f\n", celsius);
     }
     return 0;
 }
