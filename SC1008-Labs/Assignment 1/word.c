@@ -1,70 +1,70 @@
-
 #include <stdio.h>
 
-// Function prototype
-void wordEquivalent(int num);
-int input;
+int num;
+int digit;
+int firstDigit;
 
 int main() {
+
     printf("Enter the number:\n");
-    scanf("%d", &input);
+    scanf("%d", &num);
 
     printf("wordEquivalent(): ");
-    wordEquivalent(input);
-    printf("\n");
-    return 0;
-}
 
-void wordEquivalent(int num) {
-
+    // Guard clause specifically required by the question
     if (num > 99) {
-        printf("Input exceeds 99");
-        return;
+        printf("Input exceeds 99\n");
+    } else if (num == 0) {
+        printf("zero\n");
+    } else {
+        firstDigit = 1;
+
+        while (num > 0) {
+            // Logic for spacing between words
+            if (firstDigit == 0) {
+                printf(" ");
+            }
+
+            digit = num % 10;
+
+            switch (digit) {
+            case 0:
+                printf("zero");
+                break;
+            case 1:
+                printf("one");
+                break;
+            case 2:
+                printf("two");
+                break;
+            case 3:
+                printf("three");
+                break;
+            case 4:
+                printf("four");
+                break;
+            case 5:
+                printf("five");
+                break;
+            case 6:
+                printf("six");
+                break;
+            case 7:
+                printf("seven");
+                break;
+            case 8:
+                printf("eight");
+                break;
+            case 9:
+                printf("nine");
+                break;
+            }
+
+            num = num / 10;
+            firstDigit = 0;
+        }
+        printf("\n");
     }
 
-    // 2. Iterative Loop for Reverse Order
-    int firstDigit = 1; // Flag to handle spacing
-    while (num > 0) {
-        if (!firstDigit) {
-            printf(" ");
-        }
-
-        int digit = num % 10;
-
-        switch (digit) {
-        case 0:
-            printf("zero");
-            break;
-        case 1:
-            printf("one");
-            break;
-        case 2:
-            printf("two");
-            break;
-        case 3:
-            printf("three");
-            break;
-        case 4:
-            printf("four");
-            break;
-        case 5:
-            printf("five");
-            break;
-        case 6:
-            printf("six");
-            break;
-        case 7:
-            printf("seven");
-            break;
-        case 8:
-            printf("eight");
-            break;
-        case 9:
-            printf("nine");
-            break;
-        }
-
-        num = num / 10; // Move to the next digit
-        firstDigit = 0; // After the first word, we need spaces
-    }
+    return 0;
 }
