@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int numLines, value, count;
-double sum;
-
 int main() {
+    int numLines, value, count, i;
+    double sum;
+
     printf("Enter number of lines: \n");
     scanf("%d", &numLines);
 
-    for (int i = 1; i <= numLines; i++) {
+    for (i = 1; i <= numLines; i++) {
         sum = 0;
         count = 0;
 
