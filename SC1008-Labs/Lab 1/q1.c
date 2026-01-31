@@ -8,11 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char grade;
-int studentId;
-int studentMark;
-
 int main() {
+    char grade;
+    int studentId;
+    int studentMark;
 
     while (1) {
         printf("Enter Student ID:\n");
