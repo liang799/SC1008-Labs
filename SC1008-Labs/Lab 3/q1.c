@@ -24,14 +24,8 @@ int main() {
 }
 
 void reverseAr1D(int ar[], int size) {
-    int limit = ((size + 1) / 2) - 1;
     int tmp = 0;
-
-    if (size % 2 == 0) {
-        limit += 1;
-    }
-
-    for (int i = 0; i < limit; i++) {
+    for (int i = 0; i < size / 2; i++) {
         tmp = ar[i];
         ar[i] = ar[size - 1 - i];
         ar[size - 1 - i] = tmp;
