@@ -22,17 +22,22 @@ int main() {
     return 0;
 }
 int palindrome(char *str) {
-    int i, length = 1;
-    char tmp;
-    while (*str != '\0') {
-        str++;
-        length++;
+    char *start = str;
+    char *end = str;
+
+    while (*end != '\0') {
+        end++;
     }
-    str -= length;
-    for (i = 0; i < length / 2; i++) {
-        if (*(str + i) != *(str + length - i)) {
-            return 0;
+    end--;
+
+    while (start < end) {
+        if (*start != *end) {
+            return 0; // Not a palindrome
         }
+        start++;
+        end--;
     }
-    return 1;
+    return 1; // Is a palindrome
 }
+
+// a b b a
