@@ -14,38 +14,21 @@ int main() {
 }
 
 void compressStr(char *str) {
-    char *original = str;
-    char result[40] = "";
-    char current = *str;
-    int count = 0;
-    int resIdx = 0;
-    int i;
+    char result[40];
+    int resIdx = 0, i = 0;
+    int len = strlen(str);
+    int count;
 
-    while (1) {
-        if (*str == current && *str != '\0') {
+    while (i < len) {
+        count = 1;
+        while (i + count < len && str[i + count] == str[i])
             count++;
-        } else {
-            // Write the compressed segment: [countChar]
-            if (count > 1) {
-                resIdx += sprintf(&result[resIdx], "[%d%c]", count, current);
-            } else {
-                resIdx += sprintf(&result[resIdx], "%c", current);
-            }
-
-            if (*str == '\0')
-                break; // Exit after processing final group
-
-            current = *str;
-            count = 1;
-        }
-        str++;
+        if (count > 1)
+            resIdx += sprintf(&result[resIdx], "[%d%c]", count, str[i]);
+        else
+            result[resIdx++] = str[i];
+        i += count;
     }
-    for (i = 0; i < 40; i++) {
-        if (result[i] == '\0') {
-            *(original + i) = '\0';
-            break;
-        }
-        printf("%c", result[i]);
-        *(original + i) = result[i];
-    }
+    result[resIdx] = '\0';
+    printf("%s\n", result); // Add this
 }
