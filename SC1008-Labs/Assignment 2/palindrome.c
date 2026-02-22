@@ -25,10 +25,7 @@ int palindrome(char *str) {
     char *start = str;
     char *end = str;
 
-    while (*end != '\0') {
-        end++;
-    }
-    end--;
+    end += strlen(str) - 1;
 
     while (start < end) {
         if (*start != *end) {
