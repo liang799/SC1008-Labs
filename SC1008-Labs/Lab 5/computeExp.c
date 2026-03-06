@@ -42,4 +42,16 @@ float compute1(bexpression expr) {
         return expr.operand1 / expr.operand2;
     }
 }
-float compute2(bexpression *expr) { /* Write your code here */ }
+
+float compute2(bexpression *expr) {
+    switch (expr->op) {
+    case '+':
+        return expr->operand1 + expr->operand2;
+    case '-':
+        return expr->operand1 - expr->operand2;
+    case '*':
+        return expr->operand1 * expr->operand2;
+    case '/':
+        return expr->operand1 / expr->operand2;
+    }
+}
