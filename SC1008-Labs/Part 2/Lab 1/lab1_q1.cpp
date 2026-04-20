@@ -11,28 +11,34 @@ using namespace std;
 
 // Function to get a valid integer input
 int getValidInt() {
-    int tmp;
-    cin >> tmp;
-    while (cin.fail()) {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Invalid Int! Enter again: ";
-        cin >> tmp;
+    int value;
+
+    while (true) {
+        if (cin >> value) {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            return value;
+        } else {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input! Please enter an integer: ";
+        }
     }
-    return tmp;
 }
 
 // Function to get a valid float input
 float getValidFloat() {
-    float tmp;
-    cin >> tmp;
-    while (cin.fail()) {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Invalid Float! Enter again: ";
-        cin >> tmp;
+    float value;
+
+    while (true) {
+        if (cin >> value) {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            return value;
+        } else {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input! Please enter a valid float number: ";
+        }
     }
-    return tmp;
 }
 
 int main() {
