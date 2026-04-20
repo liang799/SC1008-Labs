@@ -6,19 +6,25 @@
 //
 //
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 
 bool isZero(float num, float epsilon = 1e-6) {
-    return fabs(num) < epsilon;  // Check if num is very close to 0
+    return fabs(num) < epsilon; // Check if num is very close to 0
 }
 
 // TO-DO: Write your code here
-//
-//
-
-
+template <typename T> T calculate(T a, T b, char op) {
+    switch (op) {
+    case '+':
+        return a + b;
+    case '-':
+        return a - b;
+    case '/':
+        return a / b;
+    }
+}
 
 int main() {
     cout << "Addition (10 + 5): " << calculate(10, 5, '+') << endl;
