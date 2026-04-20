@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		FA92F7672F2340DC0005DE56 /* SC1008-Labs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SC1008-Labs"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC0B2F82F6D228200969501 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +45,7 @@
 		FA92F75E2F2340DC0005DE56 = {
 			isa = PBXGroup;
 			children = (
+				FAC0B2F62F6D227100969501 /* C++ Part 2 */,
 				FA92F7692F2340DC0005DE56 /* SC1008-Labs */,
 				FA92F7682F2340DC0005DE56 /* Products */,
 			);
@@ -55,6 +57,22 @@
 				FA92F7672F2340DC0005DE56 /* SC1008-Labs */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC0B2F62F6D227100969501 /* C++ Part 2 */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0B2F72F6D227C00969501 /* Playground */,
+			);
+			path = "C++ Part 2";
+			sourceTree = "<group>";
+		};
+		FAC0B2F72F6D227C00969501 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0B2F82F6D228200969501 /* test.cpp */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

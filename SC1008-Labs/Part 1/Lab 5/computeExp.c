@@ -41,6 +41,7 @@ float compute1(bexpression expr) {
     case '/':
         return expr.operand1 / expr.operand2;
     }
+    return expr.operand1;
 }
 
 float compute2(bexpression *expr) {
@@ -54,4 +55,5 @@ float compute2(bexpression *expr) {
     case '/':
         return expr->operand1 / expr->operand2;
     }
+    return expr->operand1;
 }
